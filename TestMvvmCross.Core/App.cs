@@ -7,7 +7,7 @@ namespace TestMvvmCross.Core
         public override void Initialize()
         {
             CreatableTypes()
-                .EndingWith("Service")
+                .EndingWith("Manager")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 				

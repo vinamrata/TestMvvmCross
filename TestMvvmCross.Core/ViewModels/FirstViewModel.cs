@@ -1,4 +1,5 @@
 using Cirrious.MvvmCross.ViewModels;
+using System;
 using TestMvvmCross.Core.Manager;
 
 namespace TestMvvmCross.Core.ViewModels
@@ -26,6 +27,35 @@ namespace TestMvvmCross.Core.ViewModels
         {
             get { return _password; }
             set { _password = value; RaisePropertyChanged(() => Password); }
+        }
+
+
+        private Cirrious.MvvmCross.ViewModels.IMvxCommand _loginCommand;
+
+        /// <summary>
+        /// Gets the go back to perivous view command.
+        /// </summary>
+        /// <value>The go back to perivous view command.</value>
+        public System.Windows.Input.ICommand LoginCommand
+        {
+            get
+            {
+                _loginCommand = _loginCommand ?? new Cirrious.MvvmCross.ViewModels.MvxCommand(IsValidLogin);
+                return _loginCommand;
+            }
+        }
+
+        void IsValidLogin()
+        {
+            try
+            {
+                var result = _loginManager.IsValidLogin(UserName, Password);
+                if (result)
+                    ShowViewModel<HomeViewModel>(new { user = UserName, pwd = Password });
+            }
+            catch (Exception ex)
+            {
+            }
         }
     }
 }

@@ -87,8 +87,23 @@ namespace TestMvvmCross.Droid
 			// aapt resource value: 0x7f040000
 			public const int MvxBindingTagUnique = 2130968576;
 			
+			// aapt resource value: 0x7f040006
+			public const int MyButton = 2130968582;
+			
+			// aapt resource value: 0x7f040004
+			public const int button1 = 2130968580;
+			
+			// aapt resource value: 0x7f040002
+			public const int editText1 = 2130968578;
+			
+			// aapt resource value: 0x7f040003
+			public const int editText2 = 2130968579;
+			
 			// aapt resource value: 0x7f040001
-			public const int MyButton = 2130968577;
+			public const int textView1 = 2130968577;
+			
+			// aapt resource value: 0x7f040005
+			public const int txtUserDetails = 2130968581;
 			
 			static Id()
 			{
@@ -107,10 +122,13 @@ namespace TestMvvmCross.Droid
 			public const int FirstView = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Main = 2130903041;
+			public const int HomeView = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int SplashScreen = 2130903042;
+			public const int Main = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int SplashScreen = 2130903043;
 			
 			static Layout()
 			{
