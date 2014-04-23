@@ -6,15 +6,18 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <TextView
-        android:text="Welcome"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
-    <TextView
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35.4dp"
         android:id="@+id/txtUserDetails"
-        local:MvxBind="Text UserDetails" />
+        local:MvxBind="Text UserDetails"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp" />
+    <Mvx.MvxListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        local:MvxBind="ItemsSource Clients; ItemClick ViewDetailsCommand"
+        local:MvxItemTemplate="@layout/details"
+        android:layout_marginTop="10dp" />
 </LinearLayout>

@@ -38,9 +38,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Manager\ClientManager.cs" />
+    <Compile Include="Manager\IClientManager.cs" />
     <Compile Include="Manager\ILoginManager.cs" />
     <Compile Include="Manager\LoginManager.cs" />
+    <Compile Include="Model\ClientDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ClientViewModel.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
   </ItemGroup>

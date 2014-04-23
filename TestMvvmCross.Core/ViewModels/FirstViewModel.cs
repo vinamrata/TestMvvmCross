@@ -51,7 +51,7 @@ namespace TestMvvmCross.Core.ViewModels
             {
                 var result = _loginManager.IsValidLogin(UserName, Password);
                 if (result)
-                    ShowViewModel<HomeViewModel>(new { user = UserName, pwd = Password });
+                    ShowViewModel<HomeViewModel>(new { user = UserName});
             }
             catch (Exception ex)
             {
